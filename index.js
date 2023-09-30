@@ -80,9 +80,6 @@ server.post("/products", function (req, res, next) {
 server.del("/products", function (req, res, next) {
   console.log("DELETE /products");
   console.log("DELETE /products: received request");
-  console.log(
-    `Processed Request Count--> GET: ${getCount}, POST: ${postCount}`
-  );
 
   // Deleting all products from the collection
   productsSave.deleteMany({}, function (error) {
